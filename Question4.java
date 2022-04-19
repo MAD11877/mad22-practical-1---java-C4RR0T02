@@ -19,14 +19,15 @@ public class Question4
      
     Scanner in = new Scanner(System.in);
     int base = in.nextInt();
-    String row = "";
     
-    while (base >= 1) {
-      for (int i = 1; i > base; i++) {
-        row = row + "*";
+    int numshapetoprint = base;
+
+    while (numshapetoprint >= 1) {
+      for (int count = 0; count < numshapetoprint; count++) {
+        System.out.print("*");
       }
-      System.out.println(row);
-      base -= 1;
+      System.out.println();
+      numshapetoprint -= 1;
     }
   }
 }
