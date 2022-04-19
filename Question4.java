@@ -21,7 +21,7 @@ public class Question4
     int base = in.nextInt();
     
     while (base >= 1) {
-      for (int i = 1; i < base; i++) {
+      for (int i = 1; i > base; i++) {
         System.out.print("*");
       }
       base -= 1;
