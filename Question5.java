@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Question5
 {
@@ -26,7 +28,18 @@ public class Question5
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
      
-    Scanner in = new Scanner(System.in);
+    ArrayList<Integer> data = new ArrayList<>();
+
+    try (Scanner in = new Scanner(System.in)) {
+        int number = in.nextInt();
+        for (int i = 0; i < number; i++){
+            int listofnum = in.nextInt();
+            for (Integer numcheck : data) {
+                
+            }
+        }
+    }
     
+    System.out.println();
   }
 }
