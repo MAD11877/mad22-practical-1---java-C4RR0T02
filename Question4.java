@@ -28,7 +28,6 @@ public class Question4
       System.out.println(row);
       base -= 1;
     }
-    
   }
 }
 
