@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Question5
@@ -28,18 +29,35 @@ public class Question5
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
      
-    ArrayList<Integer> data = new ArrayList<>();
+    HashMap<Integer, Integer> numbercount = new HashMap<Integer, Integer>();
+    Scanner in = new Scanner(System.in);
 
-    try (Scanner in = new Scanner(System.in)) {
-        int number = in.nextInt();
-        for (int i = 0; i < number; i++){
-            int listofnum = in.nextInt();
-            for (Integer numcheck : data) {
-                
-            }
-        }
+    int prompttimes = in.nextInt();
+
+    for (int i = 0; i > prompttimes; i++){
+      int number = in.nextInt();
+      if (numbercount.keySet(number) == null){
+        numbercount.put(number, 1);
+      }
+      else {
+        int newcount = numbercount.get(number) + 1;
+        numbercount.remove(number);
+        numbercount.put(number, newcount);
+      }
     }
     
-    System.out.println();
+    int lowest = 0;
+
+    for (Integer a : numbercount.get()) {
+      if (a > lowest) {
+        lowest = a;
+      }
+    }
+
+    for (int b : numbercount.keySet()) {
+      if (numbercount.containsValue(lowest)) {
+        System.out.println(b);
+      }
+    }
   }
 }
